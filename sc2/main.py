@@ -146,6 +146,7 @@ async def _play_game_ai(
             await ai.on_end(Result.Defeat)
             return Result.Defeat
 
+    await asyncio.sleep(10)
     result = await initialize_first_step()
     if result is not None:
         return result
